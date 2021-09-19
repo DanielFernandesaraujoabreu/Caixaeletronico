@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <script>
+           //usuario//
+           var usuario = prompt("ola qual é seu nome?");
+            function nomedapessoa(usuario) {
+            alert( usuario);
+        }   
+        nomedapessoa("Olá é um prazer ter você por aqui Sr(a)! " +  usuario)
+        //fim//
+
+         //senha//
+         var senha = prompt ("Digite sua senha")
+         var codigo = 3589;
+         switch(senha) {
+            case "3589":
+                texto + opcao
+                break;
+                default:
+                    texto = "Acesso negado" }
+                //fim//
+                function consultarSaldo(saldo) {
+    alert(`Seu saldo atual é de R$${saldo}`);
+}
+
+function realizarDeposito(saldo, deposito) {
+    saldo += parseFloat(deposito);
+    alert('Deposito realizado com sucesso!');
+    return saldo;
+}
+
+function realizarSaque(saldo, saque) {
+    saque = parseFloat(saque);
+
+    if (saque > saldo) {
+        alert('Não é possível realizar o saque');
+        return saldo;
+    }
+
+    saldo -= saque;
+    alert('Saque realizado com sucesso!');
+    return saldo;
+}
+
+function main() {
+    var op = undefined;
+    var saldo =10000;
+
+    do {
+        var opcao= prompt('Qual operação deseja fazer?\n1 - Consultar Saldo\n2 - Realizar Saque\n3 - Realizar Depósito\n4 - Depósito\n5 - Transferência \n6 - Sair');
+
+        if (opcao == null || opcao == "") {
+            break; // Se cancelar o prompt o usuário sai do sistema
+        }
+
+        switch (opcao) {
+            case '1':
+                consultarSaldo(saldo);
+                break;
+            case '2':
+                var saque = prompt('Qual valor deseja sacar?');
+                saldo = realizarSaque(saldo, saque);
+                break;
+            case '3':
+                var deposito = prompt('Qual valor deseja depositar?');
+                saldo = realizarDeposito(saldo, deposito);
+                break;
+            case '6':
+                alert('Saindo do sistema...');
+                break;
+            default:
+                alert('Opção não existente.');
+        }
+
+    } while (opcao!= 6);
+}
+
+main();
+                document.write(texto)
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
